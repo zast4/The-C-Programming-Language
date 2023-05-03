@@ -1,0 +1,3 @@
+/Users/daniil/Desktop/Programming_Books/C_Language/cmake-build-debug/CMakeFiles/C_Language.dir
+/Users/daniil/Desktop/Programming_Books/C_Language/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/daniil/Desktop/Programming_Books/C_Language/cmake-build-debug/CMakeFiles/rebuild_cache.dir
