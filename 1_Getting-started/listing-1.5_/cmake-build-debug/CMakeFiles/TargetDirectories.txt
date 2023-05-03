@@ -1,0 +1,3 @@
+/opt/goinfre/elektrab/C-Language_Book/1_Getting-started/listing-1.4_fahrenheit-table-with-symbolic-constants/cmake-build-debug/CMakeFiles/C_Language.dir
+/opt/goinfre/elektrab/C-Language_Book/1_Getting-started/listing-1.4_fahrenheit-table-with-symbolic-constants/cmake-build-debug/CMakeFiles/edit_cache.dir
+/opt/goinfre/elektrab/C-Language_Book/1_Getting-started/listing-1.4_fahrenheit-table-with-symbolic-constants/cmake-build-debug/CMakeFiles/rebuild_cache.dir
