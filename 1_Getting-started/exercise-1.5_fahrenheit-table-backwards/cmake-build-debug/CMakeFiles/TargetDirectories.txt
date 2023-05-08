@@ -1,3 +1,0 @@
-/opt/goinfre/elektrab/C-Language_Book/1_Getting-started/exercise-1.5_fahrenheit-table-backwards/cmake-build-debug/CMakeFiles/C_Language.dir
-/opt/goinfre/elektrab/C-Language_Book/1_Getting-started/exercise-1.5_fahrenheit-table-backwards/cmake-build-debug/CMakeFiles/edit_cache.dir
-/opt/goinfre/elektrab/C-Language_Book/1_Getting-started/exercise-1.5_fahrenheit-table-backwards/cmake-build-debug/CMakeFiles/rebuild_cache.dir
