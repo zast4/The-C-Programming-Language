@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/* копирование ввода на вывод; 1-я версия */
+/* Write a program to print the value of EOF */
+
 int main() {
     int c = EOF;
     printf("%d", c);

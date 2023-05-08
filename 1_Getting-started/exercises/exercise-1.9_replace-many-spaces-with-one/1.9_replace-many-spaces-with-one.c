@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-/* копирование ввода на вывод; 1-я версия */
+/* Write a program to copy its input to its output,
+ * replacing each string of one or
+ * more blanks by a single blank. */
+
 int main() {
     int last, current;
     while ((current = getchar()) != EOF) {

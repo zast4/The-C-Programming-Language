@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/* печать таблицы теператур по Фаренгейту
- * и цельсию для fahr = 0, 20, ..., 300; вариант с плавающей точкой */
+/* Write a program to print
+ * the corresponding Celsius to Fahrenheit table. */
 
 int main() {
     float fahr, celsius;

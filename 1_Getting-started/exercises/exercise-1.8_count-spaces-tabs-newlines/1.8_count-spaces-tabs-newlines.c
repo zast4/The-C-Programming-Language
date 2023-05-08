@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/* копирование ввода на вывод; 1-я версия */
+/* Write a program to count blanks, tabs, and newlines. */
+
 int main() {
     int c, spaces = 0, tabs = 0, nl = 0;
     while ((c = getchar()) != EOF) {
