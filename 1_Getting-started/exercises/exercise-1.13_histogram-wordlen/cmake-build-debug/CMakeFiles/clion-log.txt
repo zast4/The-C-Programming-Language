@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /opt/goinfre/elektrab/C-Language_Book/1_Getting-started/exercises/exercise-1.13_histogram-wordlen -B /opt/goinfre/elektrab/C-Language_Book/1_Getting-started/exercises/exercise-1.13_histogram-wordlen/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /opt/goinfre/elektrab/C-Language_Book/1_Getting-started/exercises/exercise-1.13_histogram-wordlen/cmake-build-debug
