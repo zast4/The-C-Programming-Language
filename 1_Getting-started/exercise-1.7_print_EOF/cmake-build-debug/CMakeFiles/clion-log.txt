@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /opt/goinfre/elektrab/C-Language_Book/1_Getting-started/exercise-1.7_print_EOF Select CMakeLists.txt
