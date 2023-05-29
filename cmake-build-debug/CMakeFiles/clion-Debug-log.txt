@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /Users/daniil/Desktop/Programming_Books/C_Language Select CMakeLists.txt
