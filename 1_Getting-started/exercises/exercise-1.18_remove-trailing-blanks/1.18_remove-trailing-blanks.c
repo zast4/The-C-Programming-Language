@@ -10,15 +10,15 @@ void copy(char to[], char from[]);
 int main() {
     char line[MAXLINE];  // current input line
     int len;
-    while (line[(len = get_line(line, MAXLINE)) - 2] != EOF) {
+    while (line[(len = get_line(line, MAXLINE)) - 2] != EOF) {  // Get length of a line and immediately use this value to get the last symbol and check whather it is EOF
         for (int i = 2; line[len - i] == ' ' || line[len - i] == '\t'; ++i) {
             line[len - i] = '\0';
         }
-    for (int i = 0; i < len; ++i) {
-        if (line[i] == ' ' || line[i] == '\t')
-            putchar('[');  // Square bracket to display trailing blanks in VsCode terminal
-        else
-            putchar(line[i]);
+        for (int i = 0; i < len; ++i) {
+            if (line[i] == ' ' || line[i] == '\t')
+                putchar('[');  // Square bracket to display trailing blanks in VsCode terminal
+            else
+                putchar(line[i]);
         }
     }
     
