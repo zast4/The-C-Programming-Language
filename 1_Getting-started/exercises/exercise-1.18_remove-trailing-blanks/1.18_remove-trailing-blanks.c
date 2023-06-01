@@ -5,15 +5,23 @@
 int get_line(char line[], int maxline);
 void copy(char to[], char from[]);
 
-/* print the longest input line */
+/* print line without trailing blanks */
 
 int main() {
     char line[MAXLINE];  // current input line
-    int len = 0;
-    while ((len = get_line(line, MAXLINE)) > 0)
-        if (len > 80) {
-            printf("%s", line);
+    int len;
+    while (line[(len = get_line(line, MAXLINE)) - 2] != EOF) {
+        for (int i = 2; line[len - i] == ' ' || line[len - i] == '\t'; ++i) {
+            line[len - i] = '\0';
         }
+    for (int i = 0; i < len; ++i) {
+        if (line[i] == ' ' || line[i] == '\t')
+            putchar('[');  // Square bracket to display trailing blanks in VsCode terminal
+        else
+            putchar(line[i]);
+        }
+    }
+    
     return 0;
 }
 
