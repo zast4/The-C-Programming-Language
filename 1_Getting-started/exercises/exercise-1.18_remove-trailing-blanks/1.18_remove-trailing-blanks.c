@@ -6,7 +6,7 @@
 
 int get_line(char line[], int maxline);
 void copy(char to[], char from[]);
-int remove_trailing_blanks(char line[], int len);
+void remove_trailing_blanks(char line[], int len);
 
 /* print line without trailing blanks */
 
@@ -36,7 +36,7 @@ int get_line(char s[], int lim) {
     return i;
 }
 
-int remove_trailing_blanks(char line[], int len) {
+void remove_trailing_blanks(char line[], int len) {
     if (line[len - 1] == EOF)  // if the last read symbol is EOF we put \n for beautiful output
             putchar('\n');
     for (int i = 2; line[len - i] == ' ' || line[len - i] == '\t'; ++i) {  // if one of the last read symbols is ' ' or '\t' we replace it with '\0'
