@@ -4,7 +4,6 @@
 #define TABSIZE 8
 
 void detab(char s[], int len);
-void copy(char from[], char to[]);
 int get_line(char s[], int lim);
 
 int main() {
@@ -16,10 +15,6 @@ int main() {
     }
     while (line[len - 1] != EOF);
     return 0;
-}
-
-void copy(char from[], char to[]) {
-    for (int i = 0; (from[i] = to[i]) != '\0'; ++i);
 }
 
 /* get_line: read a line into s, return length */
