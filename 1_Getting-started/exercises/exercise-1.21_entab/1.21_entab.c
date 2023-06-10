@@ -37,7 +37,7 @@ int main() {
             if (c == '\n')  // New line is encountered, it means that all blanks on this line has already been printed, so we can reset position and start processing new line
                 cur_pos = 0;
             else if (c == '\t')  // If cur symb is tab, it means that our position whenever now it would be now has to be in the tabstop. Examples: cur_pos = 4 -> cur_pos = 8, cur_pos = 3 -> cur_pos = 8, cur_pos = 13 -> cur_pos = 16
-                cur_pos = (cur_pos + TABSIZE) - (cur_pos + TABSIZE) % TABSIZE;
+                cur_pos = (cur_pos + TABSIZE) - (cur_pos + TABSIZE) % TABSIZE;  // Cur position after we met tab is calculated in the following way: we jump TABSIZE characters forward, then substract extra characters by getting the remainder after dividing by TABSIZE from this overestimation
         }
     }
     return 0;
