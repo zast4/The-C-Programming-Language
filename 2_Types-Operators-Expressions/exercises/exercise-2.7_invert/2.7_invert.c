@@ -6,6 +6,7 @@ int main() {
   printf("%d\n", invert(10, 2, 2));
   printf("%d\n", invert(255, 3, 4));
   printf("%d\n", invert(12, 3, 2));
+  printf("%u\n", ~0);
   return 0;
 }
 
