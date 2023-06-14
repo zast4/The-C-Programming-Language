@@ -7,7 +7,8 @@ unsigned rightrot(unsigned x, int n);
 int wordlength(void);
 
 int main() {
-  printf("%u", (unsigned)rightrot((unsigned)1, (int)2));
+  printf("%u ", (unsigned)rightrot((unsigned)1, (int)2));
+  
   return 0;
 }
 
