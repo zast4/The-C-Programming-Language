@@ -8,7 +8,6 @@ void reverse(char s[]);
 
 int main() {
     char s[MAXLINE];
-    itob(10, s, 15);
     printf("%s", s);
     return 0;
 }
