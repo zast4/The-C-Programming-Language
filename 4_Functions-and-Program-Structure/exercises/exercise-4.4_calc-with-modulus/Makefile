@@ -1,18 +1,22 @@
-GCC			:= gcc
-GCC_FLAGS	:= -g
+TARGET = calc
+CC = gcc 
+CC_FLAGS = -c
 
-BIN		:= .
-SRC		:= .
+PREF_OBJ = ./obj/
 
-EXECUTABLE	:= main
+SRC = $(wildcard *.c)
+OBJ = $(patsubst %.c, $(PREF_OBJ)%.o, $(SRC))
 
-all: $(BIN)/$(EXECUTABLE)
+all: $(TARGET) run
 
-run: clean all
-	./$(BIN)/$(EXECUTABLE)
+run: 
+	./$(TARGET)
 
-$(BIN)/$(EXECUTABLE): $(SRC)/*.c
-	$(GCC) $(GCC_FLAGS) $^ -o $@
+$(TARGET) : $(OBJ)
+	$(CC) -g $(OBJ) -o $(TARGET)
 
-clean: 
-	-rm *.main
+$(PREF_OBJ)%.o : %.c
+	$(CC) $(CC_FLAGS) $< -o $@
+
+clean : 
+	rm -rf $(TARGET) $(PREF_OBJ)*.o

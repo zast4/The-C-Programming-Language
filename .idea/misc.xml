@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MakefileSettings">
+    <option name="linkedExternalProjectsSettings">
+      <MakefileProjectSettings>
+        <option name="cleanTarget" value="all" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/4_Functions-and-Program-Structure/exercises/exercise-4.4_calc-with-modulus" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/4_Functions-and-Program-Structure/exercises/exercise-4.4_calc-with-modulus" />
+          </set>
+        </option>
+        <option name="version" value="2" />
+      </MakefileProjectSettings>
+    </option>
+  </component>
+  <component name="MakefileWorkspace" PROJECT_DIR="$PROJECT_DIR$/4_Functions-and-Program-Structure/exercises/exercise-4.4_calc-with-modulus">
+    <contentRoot DIR="$PROJECT_DIR$" />
+  </component>
+</project>

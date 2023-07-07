@@ -3,6 +3,7 @@
         "ios": "c",
         "ctype.h": "c",
         "cmath": "c",
-        "*.tcc": "c"
+        "*.tcc": "c",
+        "stdlib.h": "c"
     }
 }
