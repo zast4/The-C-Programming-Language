@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "funcitons.h"
 
 int sp = 0;          /* next free stack position */

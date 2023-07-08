@@ -1,6 +1,12 @@
 #ifndef C_LANGUAGE_FUNCITONS_H
 #define C_LANGUAGE_FUNCITONS_H
 
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h> /* for atof() */
+
 #define MAXVAL 100   /* maximum depth of val stack */
 #define MAXOP 100  /* max size of operand or operator */
 #define BUFSIZE 100

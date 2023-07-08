@@ -1,15 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h> /* for atof() */
-#include <math.h> /* for fmod() */
-
 #include "funcitons.h"
 
 /* reverse Polish calculator */
 int main() {
-    int type;
+    int type, var = 0;
     double op1;
     double op2;
+    double v;
     char s[MAXOP];
+    double variable[26];
 
     while ((type = getop(s)) != EOF) {
         switch (type) {
@@ -36,6 +34,13 @@ int main() {
             else
                 printf("error: zero divisor\n");
             break;
+        case '=':
+            pop();
+            if (var >= 'A' && var <= 'Z')
+                variable[var - 'A'] = pop();
+            else
+                printf("error: novariablename\n");
+            break;
         case '%':
             op2 = pop();
             if (op2 != 0.0)
@@ -60,12 +65,19 @@ int main() {
             push(op2);
             break;
         case '\n':
-            printf("\t%.8g\n", pop());
+            v = pop();
+            printf("\t%.8g\n", v);
             break;
         default:
-            printf("error: unknown command %s\n", s);
+            if (type >= 'A' && type <= 'Z')
+                push(variable[type - 'A']);
+            else if (type == 'v')
+                push(v);
+            else
+                printf("error: unknown command %s\n", s);
             break;
         }
+        var = type;
     }
     return 0;
 }

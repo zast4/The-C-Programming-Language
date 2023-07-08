@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-
 #include "funcitons.h"
 
 /* getop: get next character or numeric operand */
@@ -39,3 +35,23 @@ int getop(char s[]) {
         return '-';
     return NUMBER;
 }
+
+/* mathfnc: check the string s for supported math function */
+
+void mathfnc(char s[]) {
+    double op2;
+
+    if (strcmp(s, "sin") == 0)
+        push(sin(pop()));
+    else if (strcmp(s, "cos") == 0)
+        push(cos(pop()));
+    else if (strcmp(s, "exp") == 0)
+        push(exp(pop()));
+    else if (strcmp(s, "pow") == 0) {
+        op2 = pop();
+        push(pow(pop(), op2));
+    }
+    else
+        printf("error: %s is not supported\n", s);
+}
+
