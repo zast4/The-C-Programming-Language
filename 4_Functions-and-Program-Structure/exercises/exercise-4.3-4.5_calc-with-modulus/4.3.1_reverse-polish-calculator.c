@@ -2,15 +2,7 @@
 #include <stdlib.h> /* for atof() */
 #include <math.h> /* for fmod() */
 
-#define MAXOP 100  /* max size of operand or operator */
-#define NUMBER '0' /* signal that a number was found */
-
-void push(double);
-double pop(void);
-void clearst(void);
-int getop(char s[]);
-int getch(void);
-void ungetch(int c);
+#include "funcitons.h"
 
 /* reverse Polish calculator */
 int main() {
@@ -23,6 +15,9 @@ int main() {
         switch (type) {
         case NUMBER:
             push(atof(s));
+            break;
+        case NAME:
+            mathfnc(s);
             break;
         case '+':
             push(pop() + pop());
