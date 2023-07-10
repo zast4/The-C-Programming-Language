@@ -15,6 +15,7 @@
 
 int getch(void);
 void ungetch(int);
+void ungets(char s[]);
 void push(double);
 double pop(void);
 void clearst(void);

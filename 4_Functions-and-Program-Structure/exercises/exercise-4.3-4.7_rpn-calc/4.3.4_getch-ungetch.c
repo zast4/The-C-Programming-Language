@@ -15,3 +15,10 @@ void ungetch(int c) {  /* push character back on input */
     else
         buf[bufp++] = c;
 }
+
+void ungets(char s[]) {
+    int i;
+    i = strlen(s);
+    while (i > 0)
+        ungetch(s[--i]);
+}

@@ -9,8 +9,7 @@ int getop(char s[]) {
     s[1] = '\0';
 
     i = 0;
-    if (islower(c)) {
-        while (islower(s[++i] = c = getch()));
+    if (islower(c)) {    
         s[i] = '\0';
         if (c != EOF)
             ungetch(c);
@@ -33,6 +32,7 @@ int getop(char s[]) {
         ungetch(c);
     if (strcmp(s, "-") == 0)
         return '-';
+    printf("\ns: %s\n", s);
     return NUMBER;
 }
 
