@@ -32,7 +32,6 @@ int getop(char s[]) {
         ungetch(c);
     if (strcmp(s, "-") == 0)
         return '-';
-    printf("\ns: %s\n", s);
     return NUMBER;
 }
 

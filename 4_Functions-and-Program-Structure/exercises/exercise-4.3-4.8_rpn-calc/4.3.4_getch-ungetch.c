@@ -2,7 +2,9 @@
 
 #define BUFSIZE 100
 
-char buf[BUFSIZE]; /* buffer for ungetch */
+
+// note for Exercise 4-8. If there will never be more than one character of pushback, just replace buf array with buf char variable
+int buf[BUFSIZE]; /* buffer for ungetch */
 int bufp = 0;      /* next free position in buf */
 
 int getch(void) {  /* get a (possibly pushed-back) characher */
