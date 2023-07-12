@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MAXLINE 100
+
 void reverse(char s[]);
 int get_line(char line[], int lim);
 
 int main() {
-
+    char s[MAXLINE];
+    get_line(s, MAXLINE);
+    reverse(s);
+    printf("%s", s);
     return 0;
 }
 
@@ -45,4 +50,5 @@ int get_line(char line[], int lim) {
         line[i++] = '\n';
 
     line[i] = '\0';
+    return i;
 }
