@@ -4,7 +4,9 @@
 int strend(char *s, char *t);
 
 int main() {
-    char s1[] = "abc";
+    char s2[] = "abc";
+    char s1[] = "debabc";
+    printf("%d", strend(s1, s2));
 }
 
 int strend(char *s, char *t) {
