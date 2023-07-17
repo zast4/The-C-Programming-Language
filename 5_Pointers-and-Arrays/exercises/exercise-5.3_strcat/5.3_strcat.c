@@ -8,14 +8,17 @@ void strcat(char *s, char *t) {
 }
 
 int main() {
-    char *s1 = malloc(sizeof(char) * 1);
-    s1[0] = 'a', s1[1] = 'b', s1[2] = 'c';
-    char *s2 = "def";
+    char *s1 = malloc(sizeof(char) * 3);
+    for (int i = 0; i < 3; ++i) {
+        s1[i] = 'a';
+    }
+    s1[3] = '\0';
+    //char s1[] = "abc";5
+    char s2[] = "def";
 
     strcat(s1, s2);
-    printf("%s\n", s1);
-    for (int i = 0; i < 8; ++i) {
-        printf("%c", s1[i]);
+    for (int i = 0; i < 10; ++i) {
+        printf("%c", *s1++);
     }
     return 0;
 }

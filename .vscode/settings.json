@@ -2,6 +2,7 @@
     "files.associations": {
         "funcitons.h": "c",
         "stdlib.h": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "stdio.h": "c"
     }
 }

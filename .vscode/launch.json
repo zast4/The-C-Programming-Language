@@ -1,0 +1,16 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Application",
+            "cwd": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.3_strcat",
+            "program": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.3_strcat/calc",
+            "preLaunchTask": "build_phony"
+        }
+    ]
+}
