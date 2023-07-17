@@ -1,4 +1,4 @@
-TARGET = calc
+TARGET = 5.3_strcat
 CC = gcc 
 CC_FLAGS = -fsanitize=address -g
 

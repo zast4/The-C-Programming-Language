@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Application",
             "cwd": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.3_strcat",
-            "program": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.3_strcat/calc",
+            "program": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.3_strcat/5.3_strcat",
             "preLaunchTask": "build_phony"
         }
     ]

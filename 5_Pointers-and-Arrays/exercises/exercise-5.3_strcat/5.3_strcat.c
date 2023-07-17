@@ -8,12 +8,12 @@ void strcat(char *s, char *t) {
 }
 
 int main() {
-    char *s1 = malloc(sizeof(char) * 3);
+    char *s1 = malloc(sizeof(char) * 10);
     for (int i = 0; i < 3; ++i) {
         s1[i] = 'a';
     }
     s1[3] = '\0';
-    //char s1[] = "abc";5
+    //char s1[] = "abc";
     char s2[] = "def";
 
     strcat(s1, s2);
