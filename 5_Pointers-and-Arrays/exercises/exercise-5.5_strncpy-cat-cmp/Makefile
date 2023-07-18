@@ -2,8 +2,10 @@ TARGET = 5.5_strn
 CC = gcc 
 # CC_FLAGS = -fsanitize=address -g -std=c11  # Sanitizer
 CC_FLAGS = -g -std=c11
-CHECK_FLAGS = -lcheck
+CHECK_FLAGS = -lcheck -lsubunit -lm
 TEST = test
+
+IMAGE_NAME = ubuntu-leak
 
 PREF_OBJ = ./
 
@@ -12,7 +14,7 @@ OBJ = $(patsubst %.c, $(PREF_OBJ)%.o, $(SRC))
 
 LIB = 5.5_strn
 
-all: $(TARGET)
+all: $(LIB).a
 
 # 1. Library
 $(LIB).a:
@@ -22,15 +24,25 @@ $(LIB).a:
 # 2. Tests
 $(TEST) : $(LIB).a
 	$(CC) $(CC_FLAGS) $(TEST).c $(LIB).a $(CHECK_FLAGS) -o $(TEST)
+
+run: $(TEST)
 	./$(TEST)
 
 # 3. Clean
-clean : 
+clean: 
 	rm -rf $(TARGET) $(PREF_OBJ)*.o *.a $(TEST)
 
 # 4. Leaks
+leaks : $(TEST)
+	valgrind --vgdb=no --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TEST)
 
+# 5. Docker image
+image:
+	docker build . -t $(IMAGE_NAME)
 
+# 6. Docker container
+container: 
+	docker run -it -v "$(shell pwd)":/home $(IMAGE_NAME)
 
 # $(TARGET) : $(OBJ)
 # 	$(CC) $(CC_FLAGS) $(OBJ) -o $(TARGET)

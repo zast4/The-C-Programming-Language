@@ -19,8 +19,8 @@ START_TEST(test_srtncat_1) {
 
     ck_assert_str_eq(s1, s3);
 
-    // free(s1);
-    // free(s2);
+    free(s1);
+    free(s2);
     //printf("%s", s1);
 }
 END_TEST
