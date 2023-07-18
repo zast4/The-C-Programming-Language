@@ -3,6 +3,9 @@
         "funcitons.h": "c",
         "stdlib.h": "c",
         "cstdlib": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "5.5_strn.h": "c",
+        "string.h": "c",
+        "check.h": "c"
     }
 }
