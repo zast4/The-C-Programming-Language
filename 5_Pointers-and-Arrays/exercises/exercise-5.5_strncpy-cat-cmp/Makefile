@@ -1,8 +1,16 @@
+OS = $(shell uname -s)
+
+ifeq ($(OS), Darwin)
+	CHECK_FLAGS = -lcheck
+	CC_FLAGS = -fsanitize=address -g -std=c11  # Sanitizer
+else
+	CC_FLAGS = -g -std=c11
+	CHECK_FLAGS = -lcheck -lsubunit -lm
+endif
+	
+
 TARGET = 5.5_strn
 CC = gcc 
-# CC_FLAGS = -fsanitize=address -g -std=c11  # Sanitizer
-CC_FLAGS = -g -std=c11
-CHECK_FLAGS = -lcheck -lsubunit -lm
 TEST = test
 
 IMAGE_NAME = ubuntu-leak
@@ -30,7 +38,7 @@ run: $(TEST)
 
 # 3. Clean
 clean: 
-	rm -rf $(TARGET) $(PREF_OBJ)*.o *.a $(TEST)
+	rm -rf $(TARGET) $(PREF_OBJ)*.o *.a *.dSYM $(TEST)
 
 # 4. Leaks
 leaks : $(TEST)
