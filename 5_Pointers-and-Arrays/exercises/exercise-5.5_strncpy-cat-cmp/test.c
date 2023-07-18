@@ -19,8 +19,8 @@ START_TEST(test_srtncat_1) {
 
     ck_assert_str_eq(s1, s3);
 
-    free(s1);
-    free(s2);
+    // free(s1);
+    // free(s2);
     //printf("%s", s1);
 }
 END_TEST
@@ -34,6 +34,8 @@ int main() {
 
     // strncat
     tcase_add_test(tc1_1, test_srtncat_1);
+
+    srunner_set_fork_status(sr, CK_NOFORK);
 
     srunner_run_all(sr, CK_ENV);
     result = srunner_ntests_failed(sr);
