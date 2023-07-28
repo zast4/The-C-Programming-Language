@@ -6,6 +6,10 @@
         "stdio.h": "c",
         "5.5_strn.h": "c",
         "string.h": "c",
-        "check.h": "c"
+        "check.h": "c",
+        "5.6_ptr-funcs.h": "c",
+        "math.h": "c",
+        "ctype.h": "c",
+        "random": "c"
     }
 }
