@@ -10,6 +10,7 @@
         "5.6_ptr-funcs.h": "c",
         "math.h": "c",
         "ctype.h": "c",
-        "random": "c"
+        "random": "c",
+        "chrono": "c"
     }
 }
