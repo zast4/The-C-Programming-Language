@@ -8,8 +8,8 @@
             "type": "lldb",
             "request": "launch",
             "name": "Application",
-            "cwd": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.3_strcat",
-            "program": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.3_strcat/5.3_strcat",
+            "cwd": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.10_rpn-with-args",
+            "program": "${workspaceFolder}/5_Pointers-and-Arrays/exercises/exercise-5.10_rpn-with-args/5.10_rpn-with-args",
             "preLaunchTask": "build_phony"
         }
     ]
