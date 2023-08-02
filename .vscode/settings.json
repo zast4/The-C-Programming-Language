@@ -11,6 +11,10 @@
         "math.h": "c",
         "ctype.h": "c",
         "random": "c",
-        "chrono": "c"
+        "chrono": "c",
+        "funcs.h": "c",
+        "string": "c",
+        "string_view": "c",
+        "format": "c"
     }
 }

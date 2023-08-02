@@ -10,6 +10,7 @@
 #define NUMERIC 1
 #define DECR 2
 #define FOLD 4
+#define MDIR 8
 
 
 int readlines(char *lineptr[], int nlines);
@@ -19,7 +20,7 @@ void q_sort(void *lineptr[], int left, int right, int (*comp)(void *, void *));
 void swap(void *v[], int, int);
 int numcmp(char *, char *);
 int str_cmp(char *s, char *t);
-int str_cmp_f(char *s, char *t);
+int charcmp(char *s, char *t);
 
 static char option = 0;
 
@@ -42,6 +43,9 @@ int main(int argc, char *argv[]) {
                 case 'f':  /* ignore case */
                     option |= FOLD;
                     break;
+                case 'd':  /* directory order */
+                    option |= MDIR;
+                    break;
                 default:
                     printf("sort:illegal option %c\n", c);
                     argc = 1;
@@ -53,12 +57,8 @@ int main(int argc, char *argv[]) {
     else if ((nlines = readlines(lineptr, LINES)) > 0) {
         if (option & NUMERIC) 
             q_sort((void **) lineptr, 0, nlines - 1, (int (*) (void *, void *)) numcmp);
-        else if (option & FOLD) {
-            // dprint(4);
-            q_sort((void **) lineptr, 0, nlines - 1, (int (*) (void *, void *)) str_cmp_f);
-        }
         else
-            q_sort((void **) lineptr, 0, nlines - 1, (int (*) (void *, void *)) str_cmp);
+            q_sort((void **) lineptr, 0, nlines - 1, (int (*) (void *, void *)) charcmp);
 
         writelines(lineptr, nlines, option & DECR);
     } else {
@@ -106,11 +106,27 @@ int str_cmp(char *s, char *t) {
 }
 
 /* str_cmp: return <0 if s < t, 0 if s == t, >0 if s > t IGNORING CASE */
-int str_cmp_f(char *s, char *t) {
-    for ( ; tolower(*s) == tolower(*t); s++, t++)
-        if (*s == '\0')
+int charcmp(char *s, char *t) {
+    char a, b;
+    int fold = (option & FOLD) ? 1 : 0;
+    int dir = (option & MDIR) ? 1 : 0;
+
+    do {
+        if (dir) {
+            while (!isalnum(*s) && *s != ' ' && *s != '\0')
+                s++;
+            while (!isalnum(*t) && *t != ' ' && *t != '\0')
+                t++;
+        }
+        a = fold ? tolower(*s) : *s;
+        b = fold ? tolower(*t) : *t;
+        s++;
+        t++;
+
+        if (a == b && a == '\0')
             return 0;
-    return tolower(*s) - tolower(*t);
+    } while (a == b);
+    return a - b;
 }
 
 void swap(void *v[], int i, int j) {

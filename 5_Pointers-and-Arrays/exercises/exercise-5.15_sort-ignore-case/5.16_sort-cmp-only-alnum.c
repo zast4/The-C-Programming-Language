@@ -105,14 +105,6 @@ int str_cmp(char *s, char *t) {
     return *s - *t;
 }
 
-/* str_cmp: return <0 if s < t, 0 if s == t, >0 if s > t IGNORING CASE */
-int str_cmp_f(char *s, char *t) {
-    for ( ; tolower(*s) == tolower(*t); s++, t++)
-        if (*s == '\0')
-            return 0;
-    return tolower(*s) - tolower(*t);
-}
-
 void swap(void *v[], int i, int j) {
     void *temp;
 
