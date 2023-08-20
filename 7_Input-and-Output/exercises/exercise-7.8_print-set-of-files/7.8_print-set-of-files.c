@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define frand() ((double) rand() / (RAND_MAX+1.0))
+
 #define LINELENGTH 80
 #define LINESPERPAGE 10
 
@@ -59,3 +61,4 @@ void printpages(FILE *ifp, FILE *ofp) {
         }
     }
 }
+
