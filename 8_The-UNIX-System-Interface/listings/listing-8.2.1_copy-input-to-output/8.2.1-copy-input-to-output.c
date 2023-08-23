@@ -1,4 +1,4 @@
-#include "syscalls.h"
+#include <unistd.h>
 
 #define BUFSIZ 1024
 

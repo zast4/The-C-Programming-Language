@@ -1,4 +1,7 @@
-#include "syscalls.h"
+#include <unistd.h>
+
+#define BUFSIZ 100
+#define EOF -1
 
 /* getchar: simple buffered version */
 int getchar(void) {
@@ -11,4 +14,11 @@ int getchar(void) {
         bufp = buf;
     }
     return (--n >= 0) ? (unsigned char) *bufp++ : EOF;
+}
+
+int main() {
+    getchar();
+    getchar();
+    getchar();
+    return 0;
 }
