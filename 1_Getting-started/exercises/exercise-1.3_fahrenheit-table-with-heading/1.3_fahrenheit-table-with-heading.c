@@ -1,3 +1,13 @@
+/***
+ *
+ * Exercise 1-3. Modify the temperature conversion program,
+ * Fahrenheit to Celsius, to print a heading above the table.
+ *
+ * print Fahrenheit-Celsius table for fahr = 0, 20, ..., 300;
+ * floating-point version.
+ *
+ ***/
+
 #include <stdio.h>
 
 /* Modify the temperature conversion program

@@ -1,3 +1,12 @@
+/**
+ *
+ * Exercise 2.7
+ *
+ * Write a function invert(x,p,n) that returns x with n bit starting at p
+ * inverted .
+ *
+ **/
+
 #include <stdio.h>
 
 unsigned invert(unsigned x, int p, int n);

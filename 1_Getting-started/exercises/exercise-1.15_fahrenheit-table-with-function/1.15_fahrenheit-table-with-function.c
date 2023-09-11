@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/* печать таблицы теператур по Фаренгейту
- * и цельсию для fahr = 0, 20, ..., 300; вариант с плавающей точкой */
+/* Rewrite the temperature conversion program of Section 1.2
+ * to use a function for conversion. */
 
 float fahr_to_cels(float fahr);
 

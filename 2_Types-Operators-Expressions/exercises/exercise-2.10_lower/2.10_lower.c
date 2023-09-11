@@ -1,3 +1,5 @@
+/* Function lower(c) using conditional expression */
+
 #include <stdio.h>
 
 int lower(int c);

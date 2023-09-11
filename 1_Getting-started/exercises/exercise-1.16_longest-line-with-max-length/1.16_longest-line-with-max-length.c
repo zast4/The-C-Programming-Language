@@ -1,3 +1,11 @@
+/**
+ * Exercise 1.16
+ *
+ * Write a program to print the length of an arbitrarily long input line
+ * and as much text as possible
+ *
+ **/
+
 #include <stdio.h>
 #include <limits.h>
 #define MAXLINE INT_MAX /* maximum input line length */

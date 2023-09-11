@@ -1,3 +1,11 @@
+/**
+ * Exercise 1.20 -
+ *
+ * Write a Program detab, which replaces tabs in the input with a proper
+ * number of blanks to spaces
+ *
+ **/
+
 #include <stdio.h>
 
 #define MAXLENGTH 1000

@@ -1,3 +1,12 @@
+/***
+ *
+ * Exercise 2.1
+ *
+ * Program to print maximum, minimum limits of char, int, long using
+ * calculation
+ *
+ ***/
+
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>
@@ -22,6 +31,5 @@ int main() {
     printf("double range: \t\t   %e \t\t %e\t\t %lu\n", DBL_MIN, DBL_MAX, sizeof(double));
     printf("long double range: \t   %Le \t\t %Le\t\t %lu\n", LDBL_MIN, LDBL_MAX, sizeof(long double));
     printf("----------------------------------------------------------------------------------------------\n");
-    printf("%c", '\x33');
     return 0;
 }
