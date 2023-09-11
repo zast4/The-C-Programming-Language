@@ -1,3 +1,6 @@
+/* Write a program which converts upper case to lower case or lower case to
+upper case depending on the name it is involved with as found in argv[0] */
+
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>

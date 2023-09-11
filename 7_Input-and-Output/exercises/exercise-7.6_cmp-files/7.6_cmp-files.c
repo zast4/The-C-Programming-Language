@@ -1,3 +1,7 @@
+/* Write a program to compare two files, printing the first line where
+ * they differ.
+ */
+
 #include <stdio.h>
 
 void filecmp(FILE *fp1, FILE *fp2);

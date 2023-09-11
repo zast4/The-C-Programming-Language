@@ -1,3 +1,7 @@
+/* malloc accepts a size request without checking its plausiblity; free believes
+ that the block it is asked to free contain a valid size field. Improve these
+ rountines so they take more pains with error checking */
+
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -1,3 +1,6 @@
+/* Design and write _flushbuf, fflush, and fclose.
+ */
+
 #include <fcntl.h>
 #include <stdarg.h>
 #include <stdlib.h>

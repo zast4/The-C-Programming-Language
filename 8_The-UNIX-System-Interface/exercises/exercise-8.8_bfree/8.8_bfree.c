@@ -1,3 +1,16 @@
+/* bfree(): Exercise from K&R 8-8.
+ *
+ * Adds an arbitrary block into the free list maintained by malloc()
+ * and free() as written by K&R in chapter 8.
+ *
+ * Massages the block to a format acceptable to the free() list,with the
+ * remaining bits (bytes) managed by Waiting To Be free()ed (wtbfree())
+ *
+ * wtbfree() can be an empty function with the effect of simply
+ * discarding the chopped off bits. Only intended to be as portable as
+ * free() itself, or maybe less so due to the use of the ALIGN macro.
+ **/
+
 #include <stdio.h>
 #include <stdlib.h>
 
