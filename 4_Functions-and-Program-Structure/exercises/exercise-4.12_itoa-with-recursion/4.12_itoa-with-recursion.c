@@ -1,3 +1,5 @@
+/* recursive version of itoa; that converts an integer string by calling a recursive routine */
+
 #include <stdio.h>
 #include <stdlib.h>
 

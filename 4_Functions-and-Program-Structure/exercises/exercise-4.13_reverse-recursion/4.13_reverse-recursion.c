@@ -1,3 +1,5 @@
+/* a recursive version of revese(s); the string reverse function */
+
 #include <stdio.h>
 #include <string.h>
 

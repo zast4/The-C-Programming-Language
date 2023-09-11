@@ -1,3 +1,5 @@
+/* a macro swap(t,x,y) that interchanges two arguments of type t */
+
 #include <stdio.h>
 #include <math.h>
 

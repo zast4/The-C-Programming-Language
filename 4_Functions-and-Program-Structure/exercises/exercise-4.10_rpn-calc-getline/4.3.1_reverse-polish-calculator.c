@@ -1,3 +1,5 @@
+/* Revise the Calculator program to use the getline instead of getch and ungetch */
+
 #include "funcitons.h"
 
 /* reverse Polish calculator */

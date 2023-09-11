@@ -1,6 +1,7 @@
 #include "funcitons.h"
 
 /* reverse Polish calculator */
+
 int main() {
     int type, var = 0;
     double op1;

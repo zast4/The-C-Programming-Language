@@ -1,3 +1,10 @@
+/**
+ *
+ * Program demonstrating atof(char s[]).The function which converts the string
+ * to a floating point value.
+ *
+ */
+
 #include <ctype.h>
 #include <stdio.h>
 

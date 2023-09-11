@@ -1,3 +1,5 @@
+/* modify getop so that it does not need to use ungetch: Hint: static int lastc */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
