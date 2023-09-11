@@ -1,3 +1,6 @@
+/* Rewrite the routines day_of_year and month_day 
+ * with pointers insted of indexing */
+
 #include <stdio.h>
 #include <stdlib.h>
 

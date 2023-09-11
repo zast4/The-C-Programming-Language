@@ -1,6 +1,6 @@
-#include "5.18_recover-dcl.h"
+/* Modify undcl so that it does not add redundant parenthesiss to declarations */
 
-extern int prevtoken;
+#include "5.19_undcl-rmv-red-braces.h"
 
 /* dcl: parse a declarator */
 void dcl(void) {
@@ -20,11 +20,11 @@ void dirdcl(void) {
     if (tokentype == '(') {             /* ( dcl ) */
         dcl();
         if (tokentype != ')')
-            errmsg("error: missing )\n");
+            printf("error: missing )\n");
     } else if (tokentype == NAME)       /* variable name */
         strcpy(name, token);
     else
-        errmsg("error: expected name or (dcl)\n");
+        printf("error: expected name or (dcl)\n");
     while ((type = gettoken()) == PARENS || type == BRACKETS)
         if (type == PARENS)
             strcat(out, " function returning");
@@ -33,9 +33,4 @@ void dirdcl(void) {
             strcat(out, token);
             strcat(out, " of");
         }
-}
-
-void errmsg(char *msg) {
-    printf("%s", msg);
-    prevtoken = YES;
 }

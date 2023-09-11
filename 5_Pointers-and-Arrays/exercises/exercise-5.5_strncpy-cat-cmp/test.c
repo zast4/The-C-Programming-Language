@@ -1,3 +1,13 @@
+/**
+ *
+ * Exercise: 5.5
+ *
+ * Write versions of the library functions strncpy, strncat, and
+ * strncmp, which operate on at most the first n characters of their argument
+ * strings.
+ *
+ **/
+
 #include "5.5_strn.h"
 
 #include <check.h>

@@ -1,3 +1,7 @@
+/* Add the -d ("Directory option") which makes comparision only on letters, numbers and blanks.
+ * Make sure it works in conjunction with -f 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,3 +1,10 @@
+/*
+ * conddetab.c  : Extend entab and detab to accept the shorthand entab -m +n to
+ * mean tab stops every n columns; starting at column m. choose a convenient
+ * (for the user) default behaviour.
+ *
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>

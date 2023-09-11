@@ -1,3 +1,5 @@
+/* Make dcl recover from input errors */
+
 #include "5.18_recover-dcl.h"
 
 extern int prevtoken;

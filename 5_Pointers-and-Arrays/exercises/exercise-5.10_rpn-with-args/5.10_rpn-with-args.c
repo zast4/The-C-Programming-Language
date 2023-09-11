@@ -1,3 +1,11 @@
+/**
+ *
+ * Write a program exprcmd, which evaluates a reverse polish expression, from
+ * the command line,where each operator or operand is a seperate argument. For
+ * eg: expr  2 3 4 + * evaluates to 2 * ( 3 + 4)
+ *
+ **/
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
