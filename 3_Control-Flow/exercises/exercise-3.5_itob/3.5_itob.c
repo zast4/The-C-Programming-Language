@@ -1,3 +1,7 @@
+/* function itob(n,s,b), that converts the integer n into a base b character
+ * representation in the string s.
+ */
+
 #include <stdio.h>
 #include <string.h>
 

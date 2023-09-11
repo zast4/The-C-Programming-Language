@@ -1,3 +1,6 @@
+/* Binsearch function, by writing minimum tests inside the loop ( at the cost of
+ * more outside)*/
+
 #include <stdio.h>
 
 int binsearch(int x, int v[], int n);
